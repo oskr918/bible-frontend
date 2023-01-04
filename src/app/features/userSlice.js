@@ -7,16 +7,25 @@ const usersSlice = createSlice({
       return action.payload;
     },
     addUserSuccess: (state, action) => {
-        return [
-          ...state,
-          {
-            id: action.payload.id,
-            name: action.payload.name,
-            email: action.payload.email,
-            password: action.payload.password
-          },
-        ];
-      },
+      return [
+        ...state,
+        {
+          id: action.payload.id,
+          name: action.payload.name,
+          email: action.payload.email,
+          password: action.payload.password
+        },
+      ];
+    },
+    isUserRegisteredSuccess: (state, action) => {
+      return [
+        ...state,
+        {
+          email: action.payload.email,
+          password: action.payload.password
+        },
+      ];
+    },
       
   },
 });

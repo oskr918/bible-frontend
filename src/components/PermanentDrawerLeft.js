@@ -13,12 +13,15 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import LoginIcon from '@mui/icons-material/Login';
-
+import BookIcon from '@mui/icons-material/Book';
+import HomeIcon from '@mui/icons-material/Home';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
 const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {
   return (
+    <>
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
@@ -27,7 +30,7 @@ export default function PermanentDrawerLeft() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            <LoginIcon sx={{ fontSize: 60 }}></LoginIcon> Login
+            <HomeIcon sx={{ fontSize: 40 }}></HomeIcon> Home
           </Typography>
         </Toolbar>
       </AppBar>
@@ -46,12 +49,13 @@ export default function PermanentDrawerLeft() {
         <Toolbar />
         <Divider />
         <List>
-          {['Login', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Home', 'Bible', 'favoritos'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index === 0 ? <LoginIcon /> : <MailIcon />}
+                  {index === 0 ? <HomeIcon></HomeIcon>: <MenuBookIcon></MenuBookIcon>}
                 </ListItemIcon>
+                
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
@@ -59,11 +63,11 @@ export default function PermanentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Profile', 'log of'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index  === 0 ? <BookIcon /> : <MailIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -78,5 +82,6 @@ export default function PermanentDrawerLeft() {
         <Toolbar />
       </Box>
     </Box>
+</>
   );
 }

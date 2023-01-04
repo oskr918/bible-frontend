@@ -3,26 +3,80 @@
   width: 300px;
   display: flex;
   flex-direction: column;
+  padding: 0 30px 30px 30px;
 }
 .container-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 70vh;
   display: flex;
   align-items: center;
 }
-fieldset{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid rgb(141, 206, 227);
+
+a{
+  text-decoration: none;
+  color: #1976d2;
+  margin-top: 30px;
 }
+
 .css-8u39c-MuiTypography-root {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
-  margin-top: 25px;
+fieldset{
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 6px;
+}
+fieldset .MuiButtonBase-root{
+  margin-top: 30px;
+}
+
+.datatable{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 20px 300px;
+}
+
+.contenedor-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.lista {
+  margin-left: 250px;
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+.biblia{
+  display: flex;
+  height: 80vh;
+}
+
+.contenedor-texto{
+  overflow-y: scroll;
+  height: 60vh;
+  
+}
+.contenedor-capitulo{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.css-1jmjcem{
+  padding: 7px;
+}
+.texto-capitulos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 

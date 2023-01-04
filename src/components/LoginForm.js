@@ -1,29 +1,34 @@
 import '../../src/App.css'
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { addUser } from '../api';
+import { isUserRegistered } from '../api';
 import Button from '@mui/material/Button';
 import LoginIcon from '@mui/icons-material/Login';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
+import { Link } from 'react-router-dom';
 
-const AddUserForm = () => {
-    const [name, setName] = useState('');
+const LoginForm = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [isRegistered, setIsregistered] = useState(false)
     const dispatch = useDispatch();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("hola")
         try {
-            const userData = { id: uuidv4(), name, email, password };
-            await addUser(userData);
-            dispatch({ type: 'ADD_USER', payload: userData });
-            // Mostrar un mensaje de éxito
+            const userData = { email, password };
+            await isUserRegistered(userData);
+            dispatch({ type: 'IS_REGISTERED', payload: userData });
+            setIsregistered(true)
+            if(isRegistered){
+                window.location.replace("http://localhost:3000/bible");
+            }else{
+                alert('el usuario o contraseña no es valido')
+            }
         } catch (error) {
             // Mostrar un mensaje de error
+
         }
     };
 
@@ -31,13 +36,8 @@ const AddUserForm = () => {
         <div className='container-form'>
             <Container maxWidth="sm" >
             <fieldset>
-                <legend>login</legend>
+                <legend>LOGIN</legend>
             <form className='login'>
-                <TextField id="name" label="Name" variant="standard"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
                 <TextField id="email" label="E-mail" variant="standard"
                     type="email"
                     value={email}
@@ -50,13 +50,14 @@ const AddUserForm = () => {
                 />
 
                 <Button onClick={handleSubmit}variant="outlined" endIcon={<LoginIcon></LoginIcon>}>
-                    Login
+                    LOGIN
                 </Button>
             </form>
             </fieldset>
         </Container>
+        <Link to='/signup'>Sign Up</Link>
         </div>
     );
 };
 
-export default AddUserForm;
+export default LoginForm;
