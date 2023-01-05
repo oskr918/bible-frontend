@@ -1,6 +1,6 @@
 # Aplicación de lectura bíblica
 
-Una aplicación web para leer y marcar versículos de la Biblia.
+"Esta aplicación de lectura bíblica es una herramienta en línea que permite a los usuarios leer y marcar sus versículos favoritos de la Biblia. Los usuarios pueden crear una cuenta y guardar sus versículos favoritos en su perfil para acceder a ellos más tarde. Además, nuestra aplicación proporciona una interfaz fácil de usar para navegar por diferentes libros y capítulos de la Biblia. ¡Mantente conectado con la Palabra de Dios en cualquier momento y en cualquier lugar con nuestra aplicación de lectura bíblica!"
 
 ## Requisitos previos
 Navegador web compatible con JavaScript moderno (recomendado Google Chrome)
