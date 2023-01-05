@@ -11,8 +11,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import BookIcon from '@mui/icons-material/Book';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
@@ -30,7 +28,7 @@ export default function PermanentDrawerLeft() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            <HomeIcon sx={{ fontSize: 40 }}></HomeIcon> Home
+            <HomeIcon sx={{ fontSize: 40 }}></HomeIcon> Biblia online
           </Typography>
         </Toolbar>
       </AppBar>
@@ -49,30 +47,55 @@ export default function PermanentDrawerLeft() {
         <Toolbar />
         <Divider />
         <List>
-          {['Home', 'Bible', 'favoritos'].map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem onClick={()=>window.location.replace("http://localhost:3000")} key="inicio" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index === 0 ? <HomeIcon></HomeIcon>: <MenuBookIcon></MenuBookIcon>}
+                 <HomeIcon></HomeIcon>
                 </ListItemIcon>
-                
-                <ListItemText primary={text} />
+                <ListItemText primary="inicio" />
               </ListItemButton>
             </ListItem>
-          ))}
         </List>
+
+        <ListItem onClick={()=>window.location.replace("http://localhost:3000/bible")} key="biblia" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                 <BookIcon></BookIcon>
+                </ListItemIcon>
+                <ListItemText primary="Biblia" />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem key="books" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                 <MenuBookIcon></MenuBookIcon>
+                </ListItemIcon>
+                <ListItemText primary="Books" />
+              </ListItemButton>
+            </ListItem>
+
         <Divider />
         <List>
-          {['Profile', 'log of'].map((text, index) => (
-            <ListItem key={text} disablePadding>
+          
+            <ListItem key="perfil" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index  === 0 ? <BookIcon /> : <MailIcon />}
+                  <BookIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary="Perfil" />
               </ListItemButton>
             </ListItem>
-          ))}
+         
+            <ListItem onClick={()=>window.location.replace("http://localhost:3000/favorites")} key="favoritos" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                 <StarBorderIcon></StarBorderIcon>
+                </ListItemIcon>
+                <ListItemText primary="favoritos" />
+              </ListItemButton>
+            </ListItem>
+            
         </List>
       </Drawer>
       <Box

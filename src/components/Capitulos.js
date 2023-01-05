@@ -29,10 +29,11 @@ const Capitulos = ({libro, onClick}) => {
     return (
         <div className='contenedor-capitulo'>
             {
-                capitulos.map((cap) => {
+                capitulos.map((cap, i) => {
                     return (
-                        <>
+                        <div key={i}>
                             <Button
+                                key={i}
                                 onClick={()=>{onClick(cap)}}
                                 color="primary"
                                 disabled={false}
@@ -41,7 +42,7 @@ const Capitulos = ({libro, onClick}) => {
                             >
                                 {cap.number}
                             </Button>
-                        </>
+                        </div>
                     )
                 })
             }

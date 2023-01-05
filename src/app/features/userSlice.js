@@ -3,7 +3,7 @@ const usersSlice = createSlice({
   name: 'users',
   initialState: [],
   reducers: {
-    fetchUsersSuccess: (state, action) => {
+    fetchFavoritesSuccess: (state, action) => {
       return action.payload;
     },
     addUserSuccess: (state, action) => {
@@ -26,8 +26,15 @@ const usersSlice = createSlice({
         },
       ];
     },
-      
+      addFavoriteSuccess: (state, action) => {
+        return[
+          ...state,
+          {
+            versiculo: action.payload.versiculo
+          }
+        ]
+      }
   },
 });
-export const { fetchUsersSuccess } = usersSlice.actions;
+export const { fetchFavoritesSuccess } = usersSlice.actions;
 export default usersSlice;

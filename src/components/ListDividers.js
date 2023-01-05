@@ -40,9 +40,9 @@ useEffect(()=>{
     <div  className='lista'>
       {datos.map((libro, i)=>{
         return(
-            <div>
-              <List onClick={()=>onClick(libro)} sx={style} component="nav" aria-label="mailbox folders">
-      <ListItem button>
+            <div key={i}>
+              <List key={i} onClick={()=>onClick(libro)} sx={style} component="nav" aria-label="mailbox folders">
+      <ListItem key={i} button>
         <ListItemText key={i} primary={libro.name} />
       </ListItem>
       <Divider />
