@@ -7,7 +7,7 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 
 const TextoBiblico = (props) => {
 
-  const URL = `https://api.scripture.api.bible/v1/bibles/b32b9d1b64b4ef29-01/passages/${props.libro}.${props.capitulo}?content-type=text&include-notes=false&include-titles=true&include-chapter-numbers=false&include-verse-numbers=true&include-verse-spans=false&use-org-id=false`
+  const URL = `https://api.scripture.api.bible/v1/bibles/592420522e16049f-01/passages/${props.libro}.${props.capitulo}?content-type=text&include-notes=false&include-titles=true&include-chapter-numbers=false&include-verse-numbers=true&include-verse-spans=false&use-org-id=false`
 
   const [texto, setTexto] = useState([])
 

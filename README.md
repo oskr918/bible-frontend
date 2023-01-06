@@ -1,6 +1,18 @@
 # Aplicación de lectura bíblica
 
-"Esta aplicación de lectura bíblica es una herramienta en línea que permite a los usuarios leer y marcar sus versículos favoritos de la Biblia. Los usuarios pueden crear una cuenta y guardar sus versículos favoritos en su perfil para acceder a ellos más tarde. Además, nuestra aplicación proporciona una interfaz fácil de usar para navegar por diferentes libros y capítulos de la Biblia. ¡Mantente conectado con la Palabra de Dios en cualquier momento y en cualquier lugar con nuestra aplicación de lectura bíblica!"
+1- ¡Buenos días! Mi nombre es oscar y hoy quiero presentarles mi proyecto de lectura bíblica.
+
+2- Mi proyecto es una aplicación web que permite a los usuarios leer y marcar sus versículos favoritos de la Biblia.
+
+3- Los usuarios pueden crear una cuenta y guardar sus versículos favoritos en su perfil para acceder a ellos más tarde. 
+Además, proporciono una interfaz fácil de usar para navegar por diferentes libros y capítulos de la Biblia.
+
+Creo que esta aplicación puede ser muy útil para personas que quieran estudiar la Biblia de manera más efectiva
+y tener acceso a sus versículos favoritos en cualquier momento y lugar.
+
+Estoy planeando monetizar este proyecto agregando una seccion de  venta de libros cristianos como bliblias devocionales y comentarios.
+
+Espero tener una versión beta disponible en los próximos meses !gracias
 
 ## Requisitos previos
 Navegador web compatible con JavaScript moderno (recomendado Google Chrome)
