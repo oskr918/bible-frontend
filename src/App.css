@@ -102,3 +102,7 @@ fieldset .MuiButtonBase-root{
   color: rgb(220, 68, 68) !important;
   float: right;
 }
+
+.contenedor-libros{
+  margin-left: 260px;
+}

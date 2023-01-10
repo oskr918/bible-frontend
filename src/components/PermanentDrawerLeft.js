@@ -52,7 +52,7 @@ export default function PermanentDrawerLeft() {
                 <ListItemIcon>
                  <HomeIcon></HomeIcon>
                 </ListItemIcon>
-                <ListItemText primary="inicio" />
+                <ListItemText primary="Inicio" />
               </ListItemButton>
             </ListItem>
         </List>
@@ -66,19 +66,19 @@ export default function PermanentDrawerLeft() {
               </ListItemButton>
             </ListItem>
 
-            <ListItem key="books" disablePadding>
+            <ListItem onClick={()=>window.location.replace("http://localhost:3000/books")} key="Books" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                  <MenuBookIcon></MenuBookIcon>
                 </ListItemIcon>
-                <ListItemText primary="Books" />
+                <ListItemText primary="Libros" />
               </ListItemButton>
             </ListItem>
 
         <Divider />
         <List>
           
-            <ListItem key="perfil" disablePadding>
+            <ListItem key="Perfil" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                   <BookIcon />
@@ -87,12 +87,12 @@ export default function PermanentDrawerLeft() {
               </ListItemButton>
             </ListItem>
          
-            <ListItem onClick={()=>window.location.replace("http://localhost:3000/favorites")} key="favoritos" disablePadding>
+            <ListItem onClick={()=>window.location.replace("http://localhost:3000/favorites")} key="Favoritos" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                  <StarBorderIcon></StarBorderIcon>
                 </ListItemIcon>
-                <ListItemText primary="favoritos" />
+                <ListItemText primary="Favoritos" />
               </ListItemButton>
             </ListItem>
             
